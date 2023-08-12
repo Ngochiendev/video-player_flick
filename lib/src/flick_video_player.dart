@@ -1,9 +1,9 @@
 import 'package:universal_html/html.dart';
+import 'package:wakelock/wakelock.dart';
 import '../../flick_video_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:wakelock/wakelock.dart';
 
 import 'utils/web_key_bindings.dart';
 
