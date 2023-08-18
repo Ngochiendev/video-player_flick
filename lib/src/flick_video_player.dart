@@ -1,5 +1,5 @@
 import 'package:universal_html/html.dart';
-import 'package:wakelock/wakelock.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 import '../../flick_video_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -83,7 +83,8 @@ class _FlickVideoPlayerState extends State<FlickVideoPlayer> {
     _setPreferredOrientation();
 
     if (widget.wakelockEnabled) {
-      Wakelock.enable();
+      // The following line will enable the Android and iOS wakelock.
+      WakelockPlus.enable();
     }
 
     if (kIsWeb) {
@@ -99,7 +100,8 @@ class _FlickVideoPlayerState extends State<FlickVideoPlayer> {
   void dispose() {
     flickManager.flickControlManager!.removeListener(listener);
     if (widget.wakelockEnabled) {
-      Wakelock.disable();
+      // The next line disables the wakelock again.
+      WakelockPlus.disable();
     }
     super.dispose();
   }
@@ -117,9 +119,10 @@ class _FlickVideoPlayerState extends State<FlickVideoPlayer> {
 
   _switchToFullscreen() {
     if (widget.wakelockEnabledFullscreen) {
-      /// Disable previous wakelock setting.
-      Wakelock.disable();
-      Wakelock.enable();
+      // The next line disables the wakelock again.
+      WakelockPlus.disable();
+      // The following line will enable the Android and iOS wakelock.
+      WakelockPlus.enable();
     }
 
     _isFullscreen = true;
@@ -144,9 +147,10 @@ class _FlickVideoPlayerState extends State<FlickVideoPlayer> {
 
   _exitFullscreen() {
     if (widget.wakelockEnabled) {
-      /// Disable previous wakelock setting.
-      Wakelock.disable();
-      Wakelock.enable();
+      // The next line disables the wakelock again.
+      WakelockPlus.disable();
+      // The following line will enable the Android and iOS wakelock.
+      WakelockPlus.enable();
     }
 
     _isFullscreen = false;
