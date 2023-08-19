@@ -3,14 +3,12 @@ Map<String, dynamic> mockData = {
     {
       "title": "Rio from Above",
       "image": "images/rio_from_above_poster.jpg",
-      "trailer_url":
-          "https://github.com/GeekyAnts/flick-video-player-demo-videos/blob/master/example/rio_from_above_compressed.mp4?raw=true",
+      "trailer_url": "https://qltc.dtsoft.vn/Content/Images/Agribank.mp4",
     },
     {
       "title": "The Valley",
       "image": "images/the_valley_poster.jpg",
-      "trailer_url":
-          "https://github.com/GeekyAnts/flick-video-player-demo-videos/blob/master/example/the_valley_compressed.mp4?raw=true",
+      "trailer_url": "https://qltc.dtsoft.vn/Content/Images/Agribank.mp4",
     },
     {
       "title": "Iceland",
